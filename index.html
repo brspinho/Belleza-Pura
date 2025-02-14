@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="utf-8" />
+    <meta name="author" content="Belezza Pura">
+    <title>Belleza Pura Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra uma forma mais pura de consumir beleza. Vegana, ecológica e cruelty-free, Belleza Pura é o que há de melhor no mercado de cosméticos sustentáveis.">
+    <meta name="keywords" content="cosméticos veganos, produtos de beleza veganos, skincare vegano, maquiagem vegana, beleza cruelty-free, cuidados com a pele, beleza sustentável, cosméticos naturais, produtos sem crueldade, cosméticos ecológicos, beleza ética">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="Images/logo.png" type="image/x-icon">
+</head>
+<body>
+
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#" class="logo">
+            <img src="Images/logo.png"/>
+        </a>
+        <ul id="menu">
+            <li class="nav-item">
+              <a href="#sobre" class="nav-link">Sobre nós</a>
+            </li>
+            <li class="nav-item">
+              <a href="#produtos" class="nav-link">Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#login" class="nav-link">Entrar</a>
+            </li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+    </nav>
+
+    <section class="hero">
+      <div class="intro-text">
+        <h1>
+          <span class="punchline"> VOCÊ MERECE UMA BELEZA MAIS PURA! </span>
+        </h1>
+        <p>
+          Caminhando para um futuro belo e sustentável
+        </p>
+         <a class="btn contato" id = href="#">Entre em contato</a>
+        <a class="btn produtosconheca" href="#produtos">Conheça nossos produtos</a>
+       
+      </div>
+      
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slides">
+            <!-- Radio buttons -->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+    
+            <!-- Slide images -->
+            <div class="slide first">
+              <img src="Images/vegana.png" alt="Imagem 1"/>
+            </div>
+            <div class="slide">
+              <img src="Images/potinhos.jpeg" alt="Imagem 2"/>
+            </div>
+            <div class="slide">
+              <img src="images/z.png" alt="Imagem 3"/>
+            </div>
+            <div class="slide">
+              <img src="Images/creminho.jpeg" alt="Imagem 4"/>
+            </div>
+    
+            <!-- Navigation auto -->
+            <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blur de fundo ao abrir form -->
+
+  <div class="blur-overlay"></div>
+
+
+    <!-- Form contato -->
+
+  <!-- Formulário de Contato -->
+<div class="form-popup" id="myForm">
+  <form id="contactForm" class="form-container" onsubmit="return handleFormSubmit(event)">
+      <h1>Vamos entrar em contato!</h1>
+
+      <label for="nome"><b>Nome</b></label>
+      <input type="text" placeholder="Digite seu Nome e Sobrenome" name="nome" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Digite seu Email" name="email" required>
+
+      <button type="submit" class="btn">Enviar</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Fechar</button>
+  </form>
+
+  <!-- Mensagem de sucesso oculta inicialmente -->
+  <div id="successMessage" class="success-message" style="display:none;">
+      <p>Formulário enviado com sucesso!</p>
+      <button class="btn" onclick="closeForm()">Fechar</button>
+  </div>
+</div>
+
+    <!-- Produtos catálogo-->
+    <section class="produtos" id="produtos">
+      <div class="container swiper">
+        <div class="slider-wrapper">
+          <div class="card-list swiper-wrapper">
+            <div class="card-item swiper-slide">
+              <img src="images/limpezafacial.jpeg" alt="User Image" class="user-image">
+              <h2 class="user-name">LIMPADOR FACIAL</h2>
+              <button class="message-button">Saiba mais</button>
+            </div>
+            <div class="card-item swiper-slide">
+              <img src="images/serum.jpeg" alt="User Image" class="user-image">
+              <h2 class="user-name">SÉRUM</h2>
+              <button class="message-button">Saiba mais</button>
+            </div>
+            <div class="card-item swiper-slide">
+              <img src="images/tonico.jpg" alt="User Image" class="user-image">
+              <h2 class="user-name">TÔNICO FACIAL</h2>
+              <button class="message-button">Saiba mais</button>
+            </div>
+            <div class="card-item swiper-slide">
+              <img src="images/hidratantes.jpeg" alt="User Image" class="user-image">
+              <h2 class="user-name">HIDRATANTES</h2>
+              <button class="message-button">Saiba mais</button>
+            </div>
+            <div class="card-item swiper-slide">
+              <img src="images/protetorsolar.jpg" alt="User Image" class="user-image">
+              <h2 class="user-name">PROTETOR SOLAR</h2>
+              <button class="message-button">Saiba mais</button>
+            </div>
+            <div class="card-item swiper-slide">
+              <img src="images/balms.jpg" alt="User Image" class="user-image">
+              <h2 class="user-name">BALMS MULTIFUNCIONAIS</h2>
+              <button class="message-button">Saiba mais</button>
+            </div>
+            <div class="card-item swiper-slide">
+              <img src="images/haircare.jpeg" alt="User Image" class="user-image">
+              <h2 class="user-name">HAIR CARE</h2>
+              <button class="message-button">Saiba mais</button>
+            </div>
+            <div class="card-item swiper-slide">
+              <img src="images/Perfumaria.jpeg" alt="User Image" class="user-image">
+              <h2 class="user-name">PERFUMARIA</h2>
+              <button class="message-button">Saiba mais</button>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-slide-button swiper-button-prev"></div>
+          <div class="swiper-slide-button swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+    
+
+
+    <!-- Sobre nós-->
+
+    <section class="sobre" id="sobre">
+      <div class="sobreinicial">
+        <h3>Bem vindos à Belleza Pura</h3>
+        <p>
+        A Belleza Pura tem como objetivo atender às suas necessidades cosméticas com a consciência limpa, trazendo para o Brasil uma abordagem única de beleza que respeita tanto você quanto a natureza. Sabemos que, no coração do nosso país, onde a diversidade e o calor humano estão sempre presentes, a verdadeira beleza vem de dentro. Por isso, buscamos promover um equilíbrio perfeito entre o cuidado com a sua pele e o respeito pelo meio ambiente. Com nossa linha de produtos sustentáveis, cruelty-free e agora VEGANOS, estamos aqui para promover uma nova forma de cuidar da sua pele, com responsabilidade e ética.
+        </p>
+      </div>
+
+      <section class="sobrinho">
+        <div class="sobreum">
+            <div class="texto-e-imagem">
+                <div class="texto">
+                    <h3>Para todo dia, para todo mundo</h3>
+                    <p>Aqui na Belleza Pura, sabemos que os cosméticos fazem parte do seu dia a dia. Seja para cuidar da pele no calor tropical ou para hidratação intensa durante os meses mais secos, nossos produtos são feitos para acompanhar o ritmo de vida do brasileiro, proporcionando hidratação, revitalização e nutrição para cada tipo de pele e cabelo.
+                    </p>
+                </div>
+                <div class="imagem">
+                    <img src="Images/brasileirinho.jpg" alt="Imagem 1">
+                </div>
+            </div>
+        </div>
+    
+        <div class="sobredois">
+            <div class="texto-e-imagem">
+                <div class="texto">
+                    <h3>É mais bonito ser sustentável</h3>
+                    <p>Ingredientes naturais e ecológicos que promovem a saúde da sua pele sem agredir o meio ambiente. A Belleza Pura se orgulha de ser uma marca que contribui para um futuro mais verde e sustentável, promovendo a beleza consciente para todos.
+                    </p>
+                </div>
+                <div class="imagem">
+                    <img src="Images/sombra.jpg" alt="Imagem 2">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+      
+
+      
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>&copy; 2024 - Todos os direitos reservados</p>
+      <p>Entre em contato pelo e-mail: bellezapura@email.com</p>
+      <p>SAC: 0800-000-0000</p>
+      <nav>
+        <ul>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+          <li><a href="#">Sobre nós</a></li>
+        </ul>
+        <ul>
+          <!-- Links para as redes sociais com ícones Font Awesome -->
+          <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+      </ul>
+      </nav>
+    </footer>
+
+
+
+
+    <!-- Referência ao arquivo JavaScript-->
+    <script src="kyraly.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+</html>
